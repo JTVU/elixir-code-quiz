@@ -3,8 +3,8 @@ defmodule LongestCompondWordTest do
   doctest LongestCompondWord
 
   setup do
-    input = ~w(cat cats catsdogcats catxdogcatsrat dog dogcatsdog hippopotamuses rat ratcat ratcatdog ratcatdogcat)
-    answer = "ratcatdogcat"
+    input = ~w(cat cats ratcatdogcatmeow catsdogcats catxdogcatsrat meow dog dogcatsdog ratcatdogcat hippopotamuses rat ratcat ratcatdog )
+    answer = "ratcatdogcatmeow"
     {:ok, input: input, answer: answer}
   end
 
