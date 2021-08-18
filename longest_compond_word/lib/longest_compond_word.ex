@@ -17,17 +17,20 @@ defmodule LongestCompondWord do
   end
 
   def print(word) do
-    parse_letters(word)
+    parse_letters(word, "")
   end
 
-  defp parse_letters("") do
+  defp parse_letters("",  _remaining) do
     print_letter("")
   end
 
-  defp parse_letters(word) do
+  # remaining_word, parsed_letters_of_word
+  defp parse_letters(word, parsed) do
     <<letter, remaining::binary>> = word
+    parsed = parsed <> <<letter::utf8>>
+    IO.puts "parsed - #{parsed} ;; remaining - #{ remaining }"
     print_letter(letter)
-    parse_letters(remaining)
+    parse_letters(remaining, parsed)
   end
 
   def print_letter("") do
