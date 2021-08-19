@@ -14,5 +14,9 @@ defmodule ClosestSquareRootTest do
     assert ClosestSquareRoot.process(20) == state[:root_of_20]
   end
 
+  test "squareroot of 1 is 1" do
+    assert ClosestSquareRoot.process(1) == 1
+  end
+
 
 end
